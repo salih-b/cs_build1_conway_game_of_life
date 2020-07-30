@@ -48,3 +48,15 @@ h1, h2, h3, h4 {
 h4 {
   margin-top: 0px;
 }
+
+.btn{
+  background: white;
+  color:green;
+  margin: 0 1%;
+}
+.btn:hover{
+  background:azure;
+}
+.btn-toolbar{
+  flex-wrap: unset;
+}

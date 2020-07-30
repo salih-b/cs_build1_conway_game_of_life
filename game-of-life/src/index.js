@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { ButtonToolbar, MenuItem, DropdownButton } from 'react-bootstrap';
+import { ButtonToolbar } from 'react-bootstrap';
 
 // 
 class Box extends React.Component {
@@ -24,7 +24,7 @@ class Box extends React.Component {
 // 
 class Grid extends React.Component {
 	render() {
-		const width = (this.props.cols * 16);
+		const width = (this.props.cols * 14);
 		var rowsArr = [];
 
 		var boxClass = "";
@@ -58,9 +58,9 @@ class Grid extends React.Component {
 // 
 class Buttons extends React.Component {
 
-	handleSelect = (evt) => {
-		this.props.gridSize(evt);
-	}
+	// handleSelect = (evt) => {
+	// 	this.props.gridSize(evt);
+	// }
 
 	render() {
 		return (
@@ -84,7 +84,7 @@ class Buttons extends React.Component {
 					<button className="btn btn-default" onClick={this.props.seed}>
 					  Seed
 					</button>
-					<DropdownButton
+					{/* <DropdownButton
 						title="Grid Size"
 						id="size-menu"
 						onSelect={this.handleSelect}
@@ -92,7 +92,7 @@ class Buttons extends React.Component {
 						<MenuItem eventKey="1">20x10</MenuItem>
 						<MenuItem eventKey="2">50x30</MenuItem>
 						<MenuItem eventKey="3">70x50</MenuItem>
-					</DropdownButton>
+					</DropdownButton> */}
 				</ButtonToolbar>
 			</div>
 			)
@@ -163,23 +163,23 @@ class Main extends React.Component {
 		});
 	}
 
-	gridSize = (size) => {
-		switch (size) {
-			case "1":
-				this.cols = 20;
-				this.rows = 10;
-			break;
-			case "2":
-				this.cols = 50;
-				this.rows = 30;
-			break;
-			default:
-				this.cols = 70;
-				this.rows = 50;
-		}
-		this.clear();
+	// gridSize = (size) => {
+	// 	switch (size) {
+	// 		case "1":
+	// 			this.cols = 20;
+	// 			this.rows = 10;
+	// 		break;
+	// 		case "2":
+	// 			this.cols = 50;
+	// 			this.rows = 30;
+	// 		break;
+	// 		default:
+	// 			this.cols = 70;
+	// 			this.rows = 50;
+	// 	}
+	// 	this.clear();
 
-	}
+	// }
 
 	play = () => {
 		let g = this.state.gridFull;
@@ -214,7 +214,7 @@ class Main extends React.Component {
   
   render() {
     return (
-      <div>
+      <div className="gol">
         <h1> The Game Of Life</h1>
         <Buttons
 					playButton={this.playButton}
