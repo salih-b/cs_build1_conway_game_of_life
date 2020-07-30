@@ -33,8 +33,7 @@ body {
   width: 150px;
   line-height: 0;
   margin: auto;
-  box-shadow: 0px 0px 20px white;
-  margin-top: 20px;
+  box-shadow: 0px 0px 20px red;
 }
   
 h1, h2, h3, h4 {
@@ -46,17 +45,25 @@ h1, h2, h3, h4 {
 }
 
 h4 {
-  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 1rem;
 }
 
 .btn{
   background: white;
   color:green;
   margin: 0 1%;
+  border-color: white;
 }
 .btn:hover{
   background:azure;
 }
 .btn-toolbar{
   flex-wrap: unset;
+}
+.gameInfo{
+  color:white;
+}
+p{
+  margin: 0 2%;
 }
